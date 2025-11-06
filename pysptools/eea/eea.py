@@ -87,7 +87,7 @@ def ATGP(data, q):
     E[0] = data[idx] # the first endmember selected
     # Generate the identity matrix.
     I = np.eye(nvariables)
-    IDX = np.zeros(q, dtype=np.int)
+    IDX = np.zeros(q, dtype=np.int32)
 
     IDX[0] = idx
 
@@ -248,3 +248,4 @@ def PPI(M, q, numSkewers, ini_skewers=None):
     U = M[:, end_member_idx]
 
     return np.array(U).T, end_member_idx
+
